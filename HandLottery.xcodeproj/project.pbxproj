@@ -8,24 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		CA14799B212A58A6001B64A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA14799A212A58A6001B64A0 /* AppDelegate.m */; };
-		CA14799E212A58A6001B64A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA14799D212A58A6001B64A0 /* ViewController.m */; };
 		CA1479A1212A58A6001B64A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA14799F212A58A6001B64A0 /* Main.storyboard */; };
 		CA1479A3212A58AD001B64A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1479A2212A58AD001B64A0 /* Assets.xcassets */; };
 		CA1479A6212A58AD001B64A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1479A4212A58AD001B64A0 /* LaunchScreen.storyboard */; };
 		CA1479A9212A58AD001B64A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479A8212A58AD001B64A0 /* main.m */; };
+		CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479B3212A6323001B64A0 /* HLBuyViewController.m */; };
+		CA1479B8212A634C001B64A0 /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479B7212A634C001B64A0 /* HLMineViewController.m */; };
+		CA1479BB212A6399001B64A0 /* HLDrawResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479BA212A6399001B64A0 /* HLDrawResultViewController.m */; };
+		CA1479BE212A64CC001B64A0 /* HLTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479BD212A64CC001B64A0 /* HLTabBarViewController.m */; };
+		CA1479C1212A64EA001B64A0 /* HLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C0212A64EA001B64A0 /* HLNavigationController.m */; };
+		CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C3212A64FF001B64A0 /* HLBaseViewController.m */; };
+		CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */; };
+		CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CA147996212A58A6001B64A0 /* HandLottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandLottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA147999212A58A6001B64A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA14799A212A58A6001B64A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CA14799C212A58A6001B64A0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CA14799D212A58A6001B64A0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CA1479A0212A58A6001B64A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA1479A2212A58AD001B64A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA1479A5212A58AD001B64A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA1479A7212A58AD001B64A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1479A8212A58AD001B64A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CA1479B2212A6323001B64A0 /* HLBuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyViewController.h; sourceTree = "<group>"; };
+		CA1479B3212A6323001B64A0 /* HLBuyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyViewController.m; sourceTree = "<group>"; };
+		CA1479B6212A634C001B64A0 /* HLMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLMineViewController.h; sourceTree = "<group>"; };
+		CA1479B7212A634C001B64A0 /* HLMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLMineViewController.m; sourceTree = "<group>"; };
+		CA1479B9212A6399001B64A0 /* HLDrawResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLDrawResultViewController.h; sourceTree = "<group>"; };
+		CA1479BA212A6399001B64A0 /* HLDrawResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLDrawResultViewController.m; sourceTree = "<group>"; };
+		CA1479BC212A64CC001B64A0 /* HLTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTabBarViewController.h; sourceTree = "<group>"; };
+		CA1479BD212A64CC001B64A0 /* HLTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTabBarViewController.m; sourceTree = "<group>"; };
+		CA1479BF212A64EA001B64A0 /* HLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLNavigationController.h; sourceTree = "<group>"; };
+		CA1479C0212A64EA001B64A0 /* HLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLNavigationController.m; sourceTree = "<group>"; };
+		CA1479C2212A64FF001B64A0 /* HLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBaseViewController.h; sourceTree = "<group>"; };
+		CA1479C3212A64FF001B64A0 /* HLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBaseViewController.m; sourceTree = "<group>"; };
+		CA1479C5212A66F2001B64A0 /* HLBuySuperLottoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuySuperLottoViewController.h; sourceTree = "<group>"; };
+		CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuySuperLottoViewController.m; sourceTree = "<group>"; };
+		CA1479C8212A6743001B64A0 /* HLBuyUnionLottoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyUnionLottoViewController.h; sourceTree = "<group>"; };
+		CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyUnionLottoViewController.m; sourceTree = "<group>"; };
+		CA1479CB212A6DA4001B64A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +80,96 @@
 		CA147998212A58A6001B64A0 /* HandLottery */ = {
 			isa = PBXGroup;
 			children = (
+				CA1479B5212A632B001B64A0 /* Base */,
+				CA1479B1212A62EC001B64A0 /* Utils */,
+				CA1479B0212A62DA001B64A0 /* Models */,
+				CA1479AF212A62C3001B64A0 /* ViewControllers */,
+				CA1479CC212A7161001B64A0 /* Views */,
 				CA147999212A58A6001B64A0 /* AppDelegate.h */,
 				CA14799A212A58A6001B64A0 /* AppDelegate.m */,
-				CA14799C212A58A6001B64A0 /* ViewController.h */,
-				CA14799D212A58A6001B64A0 /* ViewController.m */,
 				CA14799F212A58A6001B64A0 /* Main.storyboard */,
 				CA1479A2212A58AD001B64A0 /* Assets.xcassets */,
 				CA1479A4212A58AD001B64A0 /* LaunchScreen.storyboard */,
 				CA1479A7212A58AD001B64A0 /* Info.plist */,
 				CA1479A8212A58AD001B64A0 /* main.m */,
+				CA1479CB212A6DA4001B64A0 /* PrefixHeader.pch */,
 			);
 			path = HandLottery;
+			sourceTree = "<group>";
+		};
+		CA1479AF212A62C3001B64A0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA1479CF212A71D3001B64A0 /* Mine */,
+				CA1479CE212A71BD001B64A0 /* DrawResult */,
+				CA1479CD212A71A7001B64A0 /* Buy */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CA1479B0212A62DA001B64A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA1479B1212A62EC001B64A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA1479B5212A632B001B64A0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CA1479BC212A64CC001B64A0 /* HLTabBarViewController.h */,
+				CA1479BD212A64CC001B64A0 /* HLTabBarViewController.m */,
+				CA1479BF212A64EA001B64A0 /* HLNavigationController.h */,
+				CA1479C0212A64EA001B64A0 /* HLNavigationController.m */,
+				CA1479C2212A64FF001B64A0 /* HLBaseViewController.h */,
+				CA1479C3212A64FF001B64A0 /* HLBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CA1479CC212A7161001B64A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CA1479CD212A71A7001B64A0 /* Buy */ = {
+			isa = PBXGroup;
+			children = (
+				CA1479B2212A6323001B64A0 /* HLBuyViewController.h */,
+				CA1479B3212A6323001B64A0 /* HLBuyViewController.m */,
+				CA1479C5212A66F2001B64A0 /* HLBuySuperLottoViewController.h */,
+				CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */,
+				CA1479C8212A6743001B64A0 /* HLBuyUnionLottoViewController.h */,
+				CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */,
+			);
+			path = Buy;
+			sourceTree = "<group>";
+		};
+		CA1479CE212A71BD001B64A0 /* DrawResult */ = {
+			isa = PBXGroup;
+			children = (
+				CA1479B9212A6399001B64A0 /* HLDrawResultViewController.h */,
+				CA1479BA212A6399001B64A0 /* HLDrawResultViewController.m */,
+			);
+			path = DrawResult;
+			sourceTree = "<group>";
+		};
+		CA1479CF212A71D3001B64A0 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				CA1479B6212A634C001B64A0 /* HLMineViewController.h */,
+				CA1479B7212A634C001B64A0 /* HLMineViewController.m */,
+			);
+			path = Mine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +242,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA14799E212A58A6001B64A0 /* ViewController.m in Sources */,
 				CA1479A9212A58AD001B64A0 /* main.m in Sources */,
+				CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */,
+				CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */,
+				CA1479B8212A634C001B64A0 /* HLMineViewController.m in Sources */,
 				CA14799B212A58A6001B64A0 /* AppDelegate.m in Sources */,
+				CA1479BB212A6399001B64A0 /* HLDrawResultViewController.m in Sources */,
+				CA1479C1212A64EA001B64A0 /* HLNavigationController.m in Sources */,
+				CA1479BE212A64CC001B64A0 /* HLTabBarViewController.m in Sources */,
+				CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */,
+				CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +318,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = HandLottery/PrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -266,6 +375,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = HandLottery/PrefixHeader.pch;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
