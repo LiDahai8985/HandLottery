@@ -1,0 +1,20 @@
+PODS:
+  - AFNetworking/Serialization (3.2.1)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - AFNetworking/Serialization (~> 3.2.1)
+  - Masonry (~> 1.1.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Masonry
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: 7022b48b345d0d7eb57761e51eeca6620cc0b0b1
+
+COCOAPODS: 1.5.3

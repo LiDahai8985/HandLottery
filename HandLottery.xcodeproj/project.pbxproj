@@ -20,9 +20,12 @@
 		CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C3212A64FF001B64A0 /* HLBaseViewController.m */; };
 		CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */; };
 		CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */; };
+		D67A51B91B132FFF75C18BC4 /* libPods-HandLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4603ADE4D29806DFC4AA7B31 /* libPods-HandLottery.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041429885A77822860F88135 /* Pods-HandLottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandLottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery.debug.xcconfig"; sourceTree = "<group>"; };
+		4603ADE4D29806DFC4AA7B31 /* libPods-HandLottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HandLottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA147996212A58A6001B64A0 /* HandLottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HandLottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA147999212A58A6001B64A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CA14799A212A58A6001B64A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +51,7 @@
 		CA1479C8212A6743001B64A0 /* HLBuyUnionLottoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyUnionLottoViewController.h; sourceTree = "<group>"; };
 		CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyUnionLottoViewController.m; sourceTree = "<group>"; };
 		CA1479CB212A6DA4001B64A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +59,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67A51B91B132FFF75C18BC4 /* libPods-HandLottery.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4801FFD6DF416BD99D16F214 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				041429885A77822860F88135 /* Pods-HandLottery.debug.xcconfig */,
+				CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9C57496582F213C18FE8DA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4603ADE4D29806DFC4AA7B31 /* libPods-HandLottery.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA14798D212A58A6001B64A0 = {
 			isa = PBXGroup;
 			children = (
 				CA147998212A58A6001B64A0 /* HandLottery */,
 				CA147997212A58A6001B64A0 /* Products */,
+				4801FFD6DF416BD99D16F214 /* Pods */,
+				A9C57496582F213C18FE8DA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA1479AC212A58AD001B64A0 /* Build configuration list for PBXNativeTarget "HandLottery" */;
 			buildPhases = (
+				E9DA701F6B172A2DF5231B2A /* [CP] Check Pods Manifest.lock */,
 				CA147992212A58A6001B64A0 /* Sources */,
 				CA147993212A58A6001B64A0 /* Frameworks */,
 				CA147994212A58A6001B64A0 /* Resources */,
@@ -236,6 +261,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E9DA701F6B172A2DF5231B2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HandLottery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CA147992212A58A6001B64A0 /* Sources */ = {
@@ -391,6 +437,7 @@
 		};
 		CA1479AD212A58AD001B64A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 041429885A77822860F88135 /* Pods-HandLottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -408,6 +455,7 @@
 		};
 		CA1479AE212A58AD001B64A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
