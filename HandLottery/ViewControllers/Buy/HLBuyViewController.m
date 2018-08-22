@@ -13,6 +13,8 @@
 
 @interface HLBuyViewController ()
 
+
+
 @end
 
 @implementation HLBuyViewController
@@ -25,15 +27,16 @@
 
 - (IBAction)buySuperLottoHandler:(id)sender
 {
-    [HLRequestManager query_drawResultWithLotteryKindID:nil issueNumber:nil];
+    [HLRequestManager query_superLottoResultWithLastTerm:@"18080" pageCount:20];
 //    HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)buyUnionLottoHandler:(id)sender
 {
-    HLBuyUnionLottoViewController *vc = [[HLBuyUnionLottoViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [HLRequestManager query_unionLottoResultWithLotteryWithPage:1];
+//    HLBuyUnionLottoViewController *vc = [[HLBuyUnionLottoViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

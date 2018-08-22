@@ -17,14 +17,19 @@ typedef void(^HLRequestFailureBlock)(NSURLSessionDataTask * _Nullable task, NSEr
 + (instancetype)defaultManager;
 
 /**
- 获取某一期彩票开奖结果
+ 获取双色球开奖结果
 
- @param kindID 彩票种类ID
- @param issueNumber 当前查询的彩票期数
+ @param page 当前页码
  */
-+ (void)query_drawResultWithLotteryKindID:(NSString *)kindID
-                              issueNumber:(NSString *)issueNumber;
-//
-//+ (void)query_historyResultWithLotterryKindID:(NSString *)kindID;
++ (void)query_unionLottoResultWithLotteryWithPage:(NSInteger)page;
+
+/**
+ 获取大乐透开奖结果
+ 
+ @param lastTerm  上一页最后一条term值
+ @param pageCount 每页数量
+ */
++ (void)query_superLottoResultWithLastTerm:(NSString *)lastTerm
+                                  pageCount:(NSInteger)pageCount;
 
 @end
