@@ -20,6 +20,10 @@
 		CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C3212A64FF001B64A0 /* HLBaseViewController.m */; };
 		CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */; };
 		CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */; };
+		CA1479D2212A9840001B64A0 /* HLLottreyBallCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D1212A9840001B64A0 /* HLLottreyBallCollectionCell.m */; };
+		CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */; };
+		CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */; };
+		CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */; };
 		D67A51B91B132FFF75C18BC4 /* libPods-HandLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4603ADE4D29806DFC4AA7B31 /* libPods-HandLottery.a */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +55,14 @@
 		CA1479C8212A6743001B64A0 /* HLBuyUnionLottoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyUnionLottoViewController.h; sourceTree = "<group>"; };
 		CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyUnionLottoViewController.m; sourceTree = "<group>"; };
 		CA1479CB212A6DA4001B64A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CA1479D0212A9840001B64A0 /* HLLottreyBallCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLLottreyBallCollectionCell.h; sourceTree = "<group>"; };
+		CA1479D1212A9840001B64A0 /* HLLottreyBallCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLLottreyBallCollectionCell.m; sourceTree = "<group>"; };
+		CA1479D6212AA0A0001B64A0 /* HLBallHeaderReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBallHeaderReusableView.h; sourceTree = "<group>"; };
+		CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBallHeaderReusableView.m; sourceTree = "<group>"; };
+		CA1479D9212AB67F001B64A0 /* HLColorBallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLColorBallModel.h; sourceTree = "<group>"; };
+		CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLColorBallModel.m; sourceTree = "<group>"; };
+		CAA4AEF0212D4367000F06C6 /* HLRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLRequestManager.h; sourceTree = "<group>"; };
+		CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLRequestManager.m; sourceTree = "<group>"; };
 		CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +116,7 @@
 		CA147998212A58A6001B64A0 /* HandLottery */ = {
 			isa = PBXGroup;
 			children = (
+				CAA4AEEF212D4124000F06C6 /* Network */,
 				CA1479B5212A632B001B64A0 /* Base */,
 				CA1479B1212A62EC001B64A0 /* Utils */,
 				CA1479B0212A62DA001B64A0 /* Models */,
@@ -134,6 +147,8 @@
 		CA1479B0212A62DA001B64A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA1479D9212AB67F001B64A0 /* HLColorBallModel.h */,
+				CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -161,6 +176,10 @@
 		CA1479CC212A7161001B64A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CA1479D0212A9840001B64A0 /* HLLottreyBallCollectionCell.h */,
+				CA1479D1212A9840001B64A0 /* HLLottreyBallCollectionCell.m */,
+				CA1479D6212AA0A0001B64A0 /* HLBallHeaderReusableView.h */,
+				CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -194,6 +213,15 @@
 				CA1479B7212A634C001B64A0 /* HLMineViewController.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		CAA4AEEF212D4124000F06C6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CAA4AEF0212D4367000F06C6 /* HLRequestManager.h */,
+				CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,8 +323,12 @@
 				CA14799B212A58A6001B64A0 /* AppDelegate.m in Sources */,
 				CA1479BB212A6399001B64A0 /* HLDrawResultViewController.m in Sources */,
 				CA1479C1212A64EA001B64A0 /* HLNavigationController.m in Sources */,
+				CA1479D2212A9840001B64A0 /* HLLottreyBallCollectionCell.m in Sources */,
 				CA1479BE212A64CC001B64A0 /* HLTabBarViewController.m in Sources */,
+				CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */,
 				CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */,
+				CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */,
+				CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */,
 				CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,13 +473,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PN6M73F9K4;
+				DEVELOPMENT_TEAM = E886ETAFH9;
 				INFOPLIST_FILE = HandLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.HandLottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dadisoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,13 +491,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PN6M73F9K4;
+				DEVELOPMENT_TEAM = E886ETAFH9;
 				INFOPLIST_FILE = HandLottery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.HandLottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dadisoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -25,8 +25,9 @@
 
 - (IBAction)buySuperLottoHandler:(id)sender
 {
-    HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [HLRequestManager query_drawResultWithLotteryKindID:nil issueNumber:nil];
+//    HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)buyUnionLottoHandler:(id)sender

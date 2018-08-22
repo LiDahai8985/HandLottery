@@ -12,6 +12,14 @@
 #define Screen_Width   ([UIScreen mainScreen].bounds.size.width)
 #define Screen_Height  ([UIScreen mainScreen].bounds.size.height)
 
+#define RGBColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define HLRedColor        RGBColor(220, 60, 35, 1)
+#define HLBlueColor       RGBColor(50, 140, 235, 1)
 
+#define PingFengRegular(s) [UIFont fontWithName:@"PingFangSC-Regular" size:s]
+#define PingFengMedium(s)  [UIFont fontWithName:@"PingFangSC-Medium" size:s]
+
+#import "Masonry.h"
+#import "HLRequestManager.h"
 
 #endif /* PrefixHeader_pch */
