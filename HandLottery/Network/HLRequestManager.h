@@ -21,7 +21,9 @@ typedef void(^HLRequestFailureBlock)(NSURLSessionDataTask * _Nullable task, NSEr
 
  @param page 当前页码
  */
-+ (void)query_unionLottoResultWithLotteryWithPage:(NSInteger)page;
++ (void)query_unionLottoResultWithLotteryWithPage:(NSInteger)page
+                                          success:(HLRequestSuccessBlock)success
+                                          failure:(HLRequestSuccessBlock)failure;
 
 /**
  获取大乐透开奖结果
@@ -30,6 +32,8 @@ typedef void(^HLRequestFailureBlock)(NSURLSessionDataTask * _Nullable task, NSEr
  @param pageCount 每页数量
  */
 + (void)query_superLottoResultWithLastTerm:(NSString *)lastTerm
-                                  pageCount:(NSInteger)pageCount;
+                                 pageCount:(NSInteger)pageCount
+                                   success:(HLRequestSuccessBlock)success
+                                   failure:(HLRequestSuccessBlock)failure;
 
 @end

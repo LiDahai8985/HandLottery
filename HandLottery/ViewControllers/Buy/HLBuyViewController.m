@@ -27,16 +27,15 @@
 
 - (IBAction)buySuperLottoHandler:(id)sender
 {
-    [HLRequestManager query_superLottoResultWithLastTerm:@"18080" pageCount:20];
-//    HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+//    [HLRequestManager query_superLottoResultWithLastTerm:@"18080" pageCount:20];
+    HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)buyUnionLottoHandler:(id)sender
 {
-    [HLRequestManager query_unionLottoResultWithLotteryWithPage:1];
-//    HLBuyUnionLottoViewController *vc = [[HLBuyUnionLottoViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    HLBuyUnionLottoViewController *vc = [[HLBuyUnionLottoViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

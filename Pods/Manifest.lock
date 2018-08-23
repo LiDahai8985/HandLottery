@@ -7,20 +7,28 @@ PODS:
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
   - Masonry (1.1.0)
+  - MJRefresh (3.1.15.6)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking/NSURLSession (~> 3.2.1)
   - Masonry (~> 1.1.0)
+  - MJRefresh (~> 3.1.15.6)
+  - YYModel (~> 1.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Masonry
+    - MJRefresh
+    - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 0efa19656679d70a0f47cbe76e56c2271fe53a97
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: b7514a4f763d6d30c60080240fb9b391f10f7246
+PODFILE CHECKSUM: 511ffbf23b515664b50bc60bacb7a47868f85a9d
 
 COCOAPODS: 1.5.3

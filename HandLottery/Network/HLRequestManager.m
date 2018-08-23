@@ -27,7 +27,7 @@
         self.sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
         self.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
         
-        NSSet *contentTypesSet = [NSSet setWithObjects:@"application/json", @"text/javascript",nil];
+        NSSet *contentTypesSet = [NSSet setWithObjects:@"application/json", @"text/javascript",@"text/json",nil];
         self.sessionManager.responseSerializer.acceptableContentTypes = contentTypesSet;
         self.sessionManager.requestSerializer.timeoutInterval = 30;
     }
@@ -71,37 +71,41 @@
     return [[[self defaultManager] sessionManager] GET:url
                                             parameters:parameters
                                               progress:nil
-                                               success:success
-                                               failure:failure];
+                                               success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                                   id jsonObject;
+                                                   if ([responseObject isKindOfClass:[NSData class]]) {
+                                                       NSString *jsonString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+                                                       jsonString = [jsonString substringWithRange:NSMakeRange(5, jsonString.length - 6)];
+                                                       jsonObject = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingAllowFragments error:nil];
+                                                   }
+                                                   
+                                                   NSLog(@"请求结果：\n%@\n%@",task.currentRequest.URL.absoluteString,jsonObject);
+                                                   success(task, jsonObject);
+                                               } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                                                   NSLog(@"失败结果：\n%@\n%@",task.currentRequest.URL.absoluteString,error);
+                                                   failure(task, error);
+                                               }];
 }
 
 + (void)query_unionLottoResultWithLotteryWithPage:(NSInteger)page
+                                          success:(HLRequestSuccessBlock)success
+                                          failure:(HLRequestSuccessBlock)failure
 {
     [self HLGETRequestWithURL:@"http://c.cwl.gov.cn/zcms/mob/getOldLotterys"
                    parameters:@{@"callback":@"1023",@"game":@"ssq",@"limit":@"20",@"page":@(page)}
-                      success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
-                          NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                          
-                          NSLog(@"请求结果：\n%@",string);
-                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
-                          
-                          NSLog(@"失败结果：\n%@",error);
-                      }];
+                      success:success
+                      failure:failure];
 }
 
 + (void)query_superLottoResultWithLastTerm:(NSString *)lastTerm
-                                            pageCount:(NSInteger)pageCount
+                                 pageCount:(NSInteger)pageCount
+                                   success:(HLRequestSuccessBlock)success
+                                   failure:(HLRequestSuccessBlock)failure
 {
     [self HLPOSTRequestWithURL:@"http://m.lottery.gov.cn/api/mlottery_kj_detail.jspx"
                    parameters:@{@"_ltype":@"4",@"_term":@"ssq",@"_num":@(pageCount)}
-                      success:^(NSURLSessionDataTask *task, id  _Nullable responseObject) {
-                          NSString *string = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                          
-                          NSLog(@"请求结果：\n%@",string);
-                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError *error) {
-                          
-                          NSLog(@"失败结果：\n%@",error);
-                      }];
+                      success:success
+                       failure:failure];
 }
 
 @end

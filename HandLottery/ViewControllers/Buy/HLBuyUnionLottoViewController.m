@@ -95,7 +95,7 @@
         if (sectionIndex == 0) {
             [weakSelf.redDataSourceArray removeAllObjects];
             for (NSInteger i=0; i<6; i++) {
-                NSInteger randomNum = arc4random()%35 + 1;
+                NSInteger randomNum = arc4random()%33 + 1;
                 if (![weakSelf.redDataSourceArray containsObject:@(randomNum)]) {
                     [weakSelf.redDataSourceArray addObject:@(randomNum)];
                 } else {

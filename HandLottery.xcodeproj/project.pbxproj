@@ -24,6 +24,10 @@
 		CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */; };
 		CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */; };
 		CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */; };
+		CAD532F2212E44AE001C163D /* HLBuyStrategyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F1212E44AE001C163D /* HLBuyStrategyDetailViewController.m */; };
+		CAD532F5212E46A0001C163D /* HLUnionLottoResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F4212E46A0001C163D /* HLUnionLottoResultModel.m */; };
+		CAD532F8212E4819001C163D /* HLLottoBonusDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F7212E4819001C163D /* HLLottoBonusDetailModel.m */; };
+		CAD532FB212E54C7001C163D /* HLDrawResultTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532FA212E54C7001C163D /* HLDrawResultTableCell.m */; };
 		D67A51B91B132FFF75C18BC4 /* libPods-HandLottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4603ADE4D29806DFC4AA7B31 /* libPods-HandLottery.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,14 @@
 		CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLColorBallModel.m; sourceTree = "<group>"; };
 		CAA4AEF0212D4367000F06C6 /* HLRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLRequestManager.h; sourceTree = "<group>"; };
 		CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLRequestManager.m; sourceTree = "<group>"; };
+		CAD532F0212E44AE001C163D /* HLBuyStrategyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyStrategyDetailViewController.h; sourceTree = "<group>"; };
+		CAD532F1212E44AE001C163D /* HLBuyStrategyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyStrategyDetailViewController.m; sourceTree = "<group>"; };
+		CAD532F3212E46A0001C163D /* HLUnionLottoResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLUnionLottoResultModel.h; sourceTree = "<group>"; };
+		CAD532F4212E46A0001C163D /* HLUnionLottoResultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLUnionLottoResultModel.m; sourceTree = "<group>"; };
+		CAD532F6212E4819001C163D /* HLLottoBonusDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLLottoBonusDetailModel.h; sourceTree = "<group>"; };
+		CAD532F7212E4819001C163D /* HLLottoBonusDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLLottoBonusDetailModel.m; sourceTree = "<group>"; };
+		CAD532F9212E54C7001C163D /* HLDrawResultTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLDrawResultTableCell.h; sourceTree = "<group>"; };
+		CAD532FA212E54C7001C163D /* HLDrawResultTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLDrawResultTableCell.m; sourceTree = "<group>"; };
 		CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HandLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +161,10 @@
 			children = (
 				CA1479D9212AB67F001B64A0 /* HLColorBallModel.h */,
 				CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */,
+				CAD532F6212E4819001C163D /* HLLottoBonusDetailModel.h */,
+				CAD532F7212E4819001C163D /* HLLottoBonusDetailModel.m */,
+				CAD532F3212E46A0001C163D /* HLUnionLottoResultModel.h */,
+				CAD532F4212E46A0001C163D /* HLUnionLottoResultModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +196,8 @@
 				CA1479D1212A9840001B64A0 /* HLLottreyBallCollectionCell.m */,
 				CA1479D6212AA0A0001B64A0 /* HLBallHeaderReusableView.h */,
 				CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */,
+				CAD532F9212E54C7001C163D /* HLDrawResultTableCell.h */,
+				CAD532FA212E54C7001C163D /* HLDrawResultTableCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +211,8 @@
 				CA1479C6212A66F2001B64A0 /* HLBuySuperLottoViewController.m */,
 				CA1479C8212A6743001B64A0 /* HLBuyUnionLottoViewController.h */,
 				CA1479C9212A6743001B64A0 /* HLBuyUnionLottoViewController.m */,
+				CAD532F0212E44AE001C163D /* HLBuyStrategyDetailViewController.h */,
+				CAD532F1212E44AE001C163D /* HLBuyStrategyDetailViewController.m */,
 			);
 			path = Buy;
 			sourceTree = "<group>";
@@ -235,6 +255,7 @@
 				CA147992212A58A6001B64A0 /* Sources */,
 				CA147993212A58A6001B64A0 /* Frameworks */,
 				CA147994212A58A6001B64A0 /* Resources */,
+				779E9F7C1F37307D31DD5E1B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +312,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		779E9F7C1F37307D31DD5E1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HandLottery/Pods-HandLottery-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E9DA701F6B172A2DF5231B2A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,7 +358,9 @@
 				CA1479A9212A58AD001B64A0 /* main.m in Sources */,
 				CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */,
 				CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */,
+				CAD532F5212E46A0001C163D /* HLUnionLottoResultModel.m in Sources */,
 				CA1479B8212A634C001B64A0 /* HLMineViewController.m in Sources */,
+				CAD532FB212E54C7001C163D /* HLDrawResultTableCell.m in Sources */,
 				CA14799B212A58A6001B64A0 /* AppDelegate.m in Sources */,
 				CA1479BB212A6399001B64A0 /* HLDrawResultViewController.m in Sources */,
 				CA1479C1212A64EA001B64A0 /* HLNavigationController.m in Sources */,
@@ -329,7 +370,9 @@
 				CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */,
 				CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */,
 				CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */,
+				CAD532F8212E4819001C163D /* HLLottoBonusDetailModel.m in Sources */,
 				CA1479C4212A64FF001B64A0 /* HLBaseViewController.m in Sources */,
+				CAD532F2212E44AE001C163D /* HLBuyStrategyDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
