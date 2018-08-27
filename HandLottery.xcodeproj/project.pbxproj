@@ -24,6 +24,8 @@
 		CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */; };
 		CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */; };
 		CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */; };
+		CAA6512721339BF3007319B9 /* HLChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6512621339BF3007319B9 /* HLChartView.m */; };
+		CAA6512A21339DEA007319B9 /* HLDrawUnionLottoChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6512921339DEA007319B9 /* HLDrawUnionLottoChartViewController.m */; };
 		CAD532F2212E44AE001C163D /* HLBuyStrategyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F1212E44AE001C163D /* HLBuyStrategyDetailViewController.m */; };
 		CAD532F5212E46A0001C163D /* HLUnionLottoResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F4212E46A0001C163D /* HLUnionLottoResultModel.m */; };
 		CAD532F8212E4819001C163D /* HLLottoBonusDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CAD532F7212E4819001C163D /* HLLottoBonusDetailModel.m */; };
@@ -67,6 +69,10 @@
 		CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLColorBallModel.m; sourceTree = "<group>"; };
 		CAA4AEF0212D4367000F06C6 /* HLRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLRequestManager.h; sourceTree = "<group>"; };
 		CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLRequestManager.m; sourceTree = "<group>"; };
+		CAA6512521339BF3007319B9 /* HLChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLChartView.h; sourceTree = "<group>"; };
+		CAA6512621339BF3007319B9 /* HLChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLChartView.m; sourceTree = "<group>"; };
+		CAA6512821339DEA007319B9 /* HLDrawUnionLottoChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLDrawUnionLottoChartViewController.h; sourceTree = "<group>"; };
+		CAA6512921339DEA007319B9 /* HLDrawUnionLottoChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLDrawUnionLottoChartViewController.m; sourceTree = "<group>"; };
 		CAD532F0212E44AE001C163D /* HLBuyStrategyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyStrategyDetailViewController.h; sourceTree = "<group>"; };
 		CAD532F1212E44AE001C163D /* HLBuyStrategyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBuyStrategyDetailViewController.m; sourceTree = "<group>"; };
 		CAD532F3212E46A0001C163D /* HLUnionLottoResultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLUnionLottoResultModel.h; sourceTree = "<group>"; };
@@ -198,6 +204,8 @@
 				CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */,
 				CAD532F9212E54C7001C163D /* HLDrawResultTableCell.h */,
 				CAD532FA212E54C7001C163D /* HLDrawResultTableCell.m */,
+				CAA6512521339BF3007319B9 /* HLChartView.h */,
+				CAA6512621339BF3007319B9 /* HLChartView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +230,8 @@
 			children = (
 				CA1479B9212A6399001B64A0 /* HLDrawResultViewController.h */,
 				CA1479BA212A6399001B64A0 /* HLDrawResultViewController.m */,
+				CAA6512821339DEA007319B9 /* HLDrawUnionLottoChartViewController.h */,
+				CAA6512921339DEA007319B9 /* HLDrawUnionLottoChartViewController.m */,
 			);
 			path = DrawResult;
 			sourceTree = "<group>";
@@ -358,6 +368,7 @@
 				CA1479A9212A58AD001B64A0 /* main.m in Sources */,
 				CA1479C7212A66F2001B64A0 /* HLBuySuperLottoViewController.m in Sources */,
 				CA1479CA212A6743001B64A0 /* HLBuyUnionLottoViewController.m in Sources */,
+				CAA6512721339BF3007319B9 /* HLChartView.m in Sources */,
 				CAD532F5212E46A0001C163D /* HLUnionLottoResultModel.m in Sources */,
 				CA1479B8212A634C001B64A0 /* HLMineViewController.m in Sources */,
 				CAD532FB212E54C7001C163D /* HLDrawResultTableCell.m in Sources */,
@@ -366,6 +377,7 @@
 				CA1479C1212A64EA001B64A0 /* HLNavigationController.m in Sources */,
 				CA1479D2212A9840001B64A0 /* HLLottreyBallCollectionCell.m in Sources */,
 				CA1479BE212A64CC001B64A0 /* HLTabBarViewController.m in Sources */,
+				CAA6512A21339DEA007319B9 /* HLDrawUnionLottoChartViewController.m in Sources */,
 				CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */,
 				CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */,
 				CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */,
