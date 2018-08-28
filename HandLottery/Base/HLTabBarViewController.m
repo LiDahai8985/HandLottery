@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    NSArray *itemsTitlesArray = @[@"购买",@"开奖",@"我的"];
+    for (NSInteger i=0; i<itemsTitlesArray.count; i++) {
+        NSString *normalImgName = [NSString stringWithFormat:@"tabbar%ld_normal",i+1];
+        NSString *selectedImgName = [NSString stringWithFormat:@"tabbar%ld_selected",i+1];
+        UIViewController *viewController = self.viewControllers[i];
+        viewController.tabBarItem.image = [[UIImage imageNamed:normalImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    
     self.selectedIndex = 1;
 }
 

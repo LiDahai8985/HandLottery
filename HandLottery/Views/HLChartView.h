@@ -10,6 +10,7 @@
 
 @interface HLChartView : UIView
 
+@property (nonatomic, strong) NSString  *title;
 @property (nonatomic, assign) NSInteger maxX;
 @property (nonatomic, assign) NSInteger maxY;
 

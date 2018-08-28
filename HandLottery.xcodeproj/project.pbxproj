@@ -10,7 +10,6 @@
 		CA14799B212A58A6001B64A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA14799A212A58A6001B64A0 /* AppDelegate.m */; };
 		CA1479A1212A58A6001B64A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA14799F212A58A6001B64A0 /* Main.storyboard */; };
 		CA1479A3212A58AD001B64A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1479A2212A58AD001B64A0 /* Assets.xcassets */; };
-		CA1479A6212A58AD001B64A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA1479A4212A58AD001B64A0 /* LaunchScreen.storyboard */; };
 		CA1479A9212A58AD001B64A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479A8212A58AD001B64A0 /* main.m */; };
 		CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479B3212A6323001B64A0 /* HLBuyViewController.m */; };
 		CA1479B8212A634C001B64A0 /* HLMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479B7212A634C001B64A0 /* HLMineViewController.m */; };
@@ -41,7 +40,6 @@
 		CA14799A212A58A6001B64A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CA1479A0212A58A6001B64A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA1479A2212A58AD001B64A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CA1479A5212A58AD001B64A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA1479A7212A58AD001B64A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1479A8212A58AD001B64A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA1479B2212A6323001B64A0 /* HLBuyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLBuyViewController.h; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				CA14799A212A58A6001B64A0 /* AppDelegate.m */,
 				CA14799F212A58A6001B64A0 /* Main.storyboard */,
 				CA1479A2212A58AD001B64A0 /* Assets.xcassets */,
-				CA1479A4212A58AD001B64A0 /* LaunchScreen.storyboard */,
 				CA1479A7212A58AD001B64A0 /* Info.plist */,
 				CA1479A8212A58AD001B64A0 /* main.m */,
 				CA1479CB212A6DA4001B64A0 /* PrefixHeader.pch */,
@@ -313,7 +310,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1479A6212A58AD001B64A0 /* LaunchScreen.storyboard in Resources */,
 				CA1479A3212A58AD001B64A0 /* Assets.xcassets in Resources */,
 				CA1479A1212A58A6001B64A0 /* Main.storyboard in Resources */,
 			);
@@ -397,14 +393,6 @@
 				CA1479A0212A58A6001B64A0 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CA1479A4212A58AD001B64A0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CA1479A5212A58AD001B64A0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -527,16 +515,18 @@
 			baseConfigurationReference = 041429885A77822860F88135 /* Pods-HandLottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E886ETAFH9;
 				INFOPLIST_FILE = HandLottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dadisoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -545,16 +535,18 @@
 			baseConfigurationReference = CDF34BFEB764645D7D40EE63 /* Pods-HandLottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E886ETAFH9;
 				INFOPLIST_FILE = HandLottery/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dadisoft.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

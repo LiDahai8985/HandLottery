@@ -19,6 +19,26 @@
     [super viewDidLoad];
     
     self.interactivePopGestureRecognizer.delegate = self;
+    
+    self.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationBar.translucent = NO;
+    self.navigationBar.tintColor = [UIColor whiteColor];
+    [self.navigationBar setBackgroundImage:[self drawImageWithColor:HLRedColor size:CGSizeMake(Screen_Width, 64)] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setShadowImage:[self drawImageWithColor:RGBColor(150, 150, 150, 1) size:CGSizeMake(Screen_Width, 0.5)]];
+}
+
+- (UIImage *)drawImageWithColor:(UIColor *)color size:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context , CGRectMake(0, 0, size.width, size.height));
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 
 
@@ -30,7 +50,6 @@
         HLBaseViewController *topViewController = self.viewControllers.lastObject;
         return topViewController.canInteractivePopGesture;
     }
-    
     return NO;
 }
 
