@@ -16,6 +16,8 @@
 #define HLRedColor        RGBColor(235, 40, 30, 1)
 #define HLBlueColor       RGBColor(50, 140, 235, 1)
 
+#define HLCount(n,m)      [HLUtil countOfGet:n from:m]
+
 #define PingFengRegular(s) [UIFont fontWithName:@"PingFangSC-Regular" size:s]
 #define PingFengMedium(s)  [UIFont fontWithName:@"PingFangSC-Medium" size:s]
 
@@ -23,5 +25,6 @@
 #import "YYModel.h"
 #import "MJRefresh.h"
 #import "HLRequestManager.h"
+#import "HLUtil.h"
 
 #endif /* PrefixHeader_pch */

@@ -38,10 +38,14 @@
     return @{@"bonusDetailList":[HLLottoBonusDetailModel class]};
 }
 
+
 - (void)setRedNum:(NSString *)redNum
 {
     _redNum = redNum;
-    NSArray *redNums = [redNum componentsSeparatedByString:@","];
+    // 升序排列
+    NSArray *redNums = [[redNum componentsSeparatedByString:@","] sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
     self.redBallNums = redNums;
 }
 

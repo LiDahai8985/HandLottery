@@ -36,6 +36,7 @@
     [self.ballButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     self.ballButton.layer.borderWidth = 0.5;
     self.ballButton.layer.cornerRadius = 20;
+    self.ballButton.userInteractionEnabled = NO;
     [self addSubview:self.ballButton];
     [self.ballButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self);

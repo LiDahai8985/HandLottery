@@ -15,6 +15,7 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) NSMutableArray   *redDataSourceArray;
 @property (nonatomic, strong) NSMutableArray   *blueDataSourceArray;
+@property (nonatomic, strong) UILabel          *selectedContentLabel;
 
 @end
 
@@ -26,10 +27,44 @@
     self.title = @"大乐透";
     self.view.backgroundColor = RGBColor(238, 238, 245, 1);
     
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"提交"
+                                                                       style:UIBarButtonItemStylePlain
+                                                                      target:self
+                                                                      action:@selector(commit)];
+    self.navigationItem.rightBarButtonItem = rightBarButton;
+    
     [self.view addSubview:self.collectionView];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 50, 0));
     }];
+    
+    [self.view addSubview:self.selectedContentLabel];
+    [self.selectedContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(100, 50));
+        make.left.mas_equalTo(10);
+        make.bottom.equalTo(self.view);
+    }];
+    
+}
+
+#pragma mark-
+- (void)commit
+{
+    
+}
+
+- (void)updateSelectedContent
+{
+    NSInteger selectedCount = HLCount(5, self.redDataSourceArray.count)*HLCount(2, self.blueDataSourceArray.count);
+    NSString *normalString = [NSString stringWithFormat:@"已选%ld注",selectedCount];
+    NSDictionary *normalAttribute = @{NSFontAttributeName:PingFengMedium(14),
+                                      NSForegroundColorAttributeName:RGBColor(0, 0, 0, 1)};
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:normalString
+                                                                                    attributes:normalAttribute];
+    [attributedString setAttributes:@{NSFontAttributeName:PingFengMedium(17),
+                                      NSForegroundColorAttributeName:HLRedColor}
+                              range:NSMakeRange(2, normalString.length-3)];
+    self.selectedContentLabel.attributedText = attributedString;
 }
 
 #pragma mark- UICollectionViewDelegate && UICollectionViewDataSource
@@ -118,6 +153,8 @@
         [UIView performWithoutAnimation:^{
             [weakSelf.collectionView reloadSections:[NSIndexSet indexSetWithIndex:sectionIndex]];
         }];
+        
+        [weakSelf updateSelectedContent];
     };
     return headerView;
 }
@@ -131,6 +168,26 @@
 {
     return CGSizeZero;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        if ([self.redDataSourceArray containsObject:@(indexPath.item+1)]) {
+            [self.redDataSourceArray removeObject:@(indexPath.item+1)];
+        } else {
+            [self.redDataSourceArray addObject:@(indexPath.item+1)];
+        }
+    } else {
+        if ([self.blueDataSourceArray containsObject:@(indexPath.item+1)]) {
+            [self.blueDataSourceArray removeObject:@(indexPath.item+1)];
+        } else {
+            [self.blueDataSourceArray addObject:@(indexPath.item+1)];
+        }
+    }
+    [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    [self updateSelectedContent];
+}
+
 #pragma mark- Setter / Getter
 
 - (UICollectionView *)collectionView
@@ -150,6 +207,16 @@
                    withReuseIdentifier:NSStringFromClass([HLBallHeaderReusableView class])];
     }
     return _collectionView;
+}
+
+- (UILabel *)selectedContentLabel
+{
+    if (!_selectedContentLabel) {
+        _selectedContentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, Screen_Height - 50, 100, 50)];
+        _selectedContentLabel.font = PingFengMedium(14);
+        _selectedContentLabel.backgroundColor = [UIColor clearColor];
+    }
+    return _selectedContentLabel;
 }
 
 - (NSMutableArray *)redDataSourceArray

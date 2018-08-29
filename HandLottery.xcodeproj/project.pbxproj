@@ -22,6 +22,7 @@
 		CA1479D2212A9840001B64A0 /* HLLottreyBallCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D1212A9840001B64A0 /* HLLottreyBallCollectionCell.m */; };
 		CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */; };
 		CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */; };
+		CA6D1E36213646E900BACDF9 /* HLUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA6D1E35213646E900BACDF9 /* HLUtil.mm */; };
 		CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */; };
 		CAA6512721339BF3007319B9 /* HLChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6512621339BF3007319B9 /* HLChartView.m */; };
 		CAA6512A21339DEA007319B9 /* HLDrawUnionLottoChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA6512921339DEA007319B9 /* HLDrawUnionLottoChartViewController.m */; };
@@ -65,6 +66,8 @@
 		CA1479D7212AA0A0001B64A0 /* HLBallHeaderReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLBallHeaderReusableView.m; sourceTree = "<group>"; };
 		CA1479D9212AB67F001B64A0 /* HLColorBallModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLColorBallModel.h; sourceTree = "<group>"; };
 		CA1479DA212AB67F001B64A0 /* HLColorBallModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLColorBallModel.m; sourceTree = "<group>"; };
+		CA6D1E34213646E900BACDF9 /* HLUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLUtil.h; sourceTree = "<group>"; };
+		CA6D1E35213646E900BACDF9 /* HLUtil.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HLUtil.mm; sourceTree = "<group>"; };
 		CAA4AEF0212D4367000F06C6 /* HLRequestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLRequestManager.h; sourceTree = "<group>"; };
 		CAA4AEF1212D4367000F06C6 /* HLRequestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLRequestManager.m; sourceTree = "<group>"; };
 		CAA6512521339BF3007319B9 /* HLChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLChartView.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 		CA1479B1212A62EC001B64A0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CA6D1E34213646E900BACDF9 /* HLUtil.h */,
+				CA6D1E35213646E900BACDF9 /* HLUtil.mm */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				CA1479BE212A64CC001B64A0 /* HLTabBarViewController.m in Sources */,
 				CAA6512A21339DEA007319B9 /* HLDrawUnionLottoChartViewController.m in Sources */,
 				CAA4AEF2212D4367000F06C6 /* HLRequestManager.m in Sources */,
+				CA6D1E36213646E900BACDF9 /* HLUtil.mm in Sources */,
 				CA1479B4212A6323001B64A0 /* HLBuyViewController.m in Sources */,
 				CA1479DB212AB67F001B64A0 /* HLColorBallModel.m in Sources */,
 				CA1479D8212AA0A0001B64A0 /* HLBallHeaderReusableView.m in Sources */,
