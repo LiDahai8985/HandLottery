@@ -142,6 +142,7 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, Screen_Height)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        _tableView.tableFooterView = [UIView new];
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
             [self requestUnionLottHistoryMore:NO];
         }];

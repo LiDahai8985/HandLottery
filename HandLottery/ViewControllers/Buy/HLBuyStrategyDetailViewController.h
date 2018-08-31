@@ -10,4 +10,6 @@
 
 @interface HLBuyStrategyDetailViewController : HLBaseViewController
 
+@property (nonatomic, strong) NSMutableArray *selectedColorBallsArray;
+
 @end

@@ -7,8 +7,13 @@
 //
 
 #import "HLBuySuperLottoViewController.h"
+#import "HLBuyStrategyManagerViewController.h"
+
 #import "HLLottreyBallCollectionCell.h"
 #import "HLBallHeaderReusableView.h"
+
+#import "HLSelectedColorBallModel.h"
+
 
 @interface HLBuySuperLottoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -38,6 +43,7 @@
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 50, 0));
     }];
     
+    [self updateSelectedContent];
     [self.view addSubview:self.selectedContentLabel];
     [self.selectedContentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(100, 50));
@@ -45,12 +51,60 @@
         make.bottom.equalTo(self.view);
     }];
     
+    UIButton *random5Button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [random5Button setTitle:@"机选5注" forState:UIControlStateNormal];
+    random5Button.titleLabel.font = PingFengRegular(14);
+    [random5Button setTitleColor:RGBColor(90, 90, 90, 1) forState:UIControlStateNormal];
+    [random5Button setTitleColor:RGBColor(50, 50, 50, 1) forState:UIControlStateHighlighted];
+    random5Button.layer.cornerRadius = 14;
+    random5Button.layer.borderColor = RGBColor(180, 180, 180, 1).CGColor;
+    random5Button.layer.borderWidth = 0.5;
+    [random5Button addTarget:self
+                      action:@selector(randome5SelectHandler)
+            forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:random5Button];
+    [random5Button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(self.selectedContentLabel);
+        make.right.mas_offset(-10);
+        make.size.mas_equalTo(CGSizeMake(80, 28));
+    }];
 }
 
 #pragma mark-
+
+- (void)randome5SelectHandler
+{
+    // 机选五注
+    NSArray *random5NumsArray = [HLUtil randomNumWithTotalCount:5
+                                                       redRange:NSMakeRange(5, 35)
+                                                      blueRange:NSMakeRange(2, 12)
+                                                    sourceArray:nil];
+    
+    HLBuyStrategyManagerViewController *vc = [[HLBuyStrategyManagerViewController alloc] init];
+    [vc.dataSourceArray addObjectsFromArray:random5NumsArray];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
 - (void)commit
 {
+    if (self.redDataSourceArray.count<5) {
+        NSLog(@"请至少选择5个红球");
+        return;
+    }
     
+    if (self.blueDataSourceArray.count<2) {
+        NSLog(@"请至少选择2个蓝球");
+        return;
+    }
+    
+    HLSelectedColorBallModel *ballModel = [[HLSelectedColorBallModel alloc] init];
+    [ballModel.redNumsArray addObjectsFromArray:self.redDataSourceArray];
+    [ballModel.redNumsArray addObjectsFromArray:self.blueDataSourceArray];
+    
+    HLBuyStrategyManagerViewController *vc = [[HLBuyStrategyManagerViewController alloc] init];
+    [vc.dataSourceArray addObject:ballModel];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)updateSelectedContent

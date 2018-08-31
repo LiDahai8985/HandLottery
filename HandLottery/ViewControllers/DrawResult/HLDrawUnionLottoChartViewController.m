@@ -35,7 +35,6 @@
     self.redChartView.maxY = 200;
     self.redChartView.title = @"（红球数据统计）";
     self.redChartView.dataSourceArray = self.redInfoArray;
-    [self.redChartView drawChartLine];
     
     self.blueChartView.frame = CGRectMake(10, CGRectGetMaxY(self.redChartView.frame)+50, Screen_Width - 20, (Screen_Height-64)/2 - 60);
 //    self.blueChartView.backgroundColor = RGBColor(220, 220, 220, 1);
@@ -44,14 +43,19 @@
     self.blueChartView.maxY = 80;
     self.blueChartView.title = @"（蓝球数据统计）";
     self.blueChartView.dataSourceArray = self.blueInfoArray;
-    [self.blueChartView drawChartLine];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.redChartView drawChartLine];
-    [self.blueChartView drawChartLine];
+    
+    if (!self.redChartView.didDrawChart) {
+        [self.redChartView drawChartLine];
+    }
+    
+    if (!self.blueChartView.didDrawChart) {
+        [self.blueChartView drawChartLine];
+    }
 }
 
 - (HLChartView *)redChartView

@@ -8,9 +8,6 @@
 
 #import "HLChartView.h"
 
-#define lineColor  RGBColor(30,30,30,1)
-
-
 @implementation HLChartView
 
 - (void)setDataSourceArray:(NSMutableArray *)dataSourceArray
@@ -29,7 +26,7 @@
     [yLinePath addLineToPoint:CGPointMake(30, self.frame.size.height-35)];
     yLine.path = yLinePath.CGPath;
     yLine.lineWidth = 1;
-    yLine.strokeColor = lineColor.CGColor;
+    yLine.strokeColor = HLBLackColor.CGColor;
     yLine.lineCap = kCALineCapRound;
     [self.layer addSublayer:yLine];
     
@@ -43,7 +40,7 @@
     [yArrowPath closePath];
     yArrow.path = yArrowPath.CGPath;
     yArrow.lineWidth = 1;
-    yArrow.fillColor = lineColor.CGColor;
+    yArrow.fillColor = HLBLackColor.CGColor;
     yArrow.lineCap = kCALineCapRound;
     [self.layer addSublayer:yArrow];
     
@@ -51,7 +48,7 @@
     CATextLayer *yTxtLayer = [CATextLayer layer];
     yTxtLayer.frame = CGRectMake(-16, self.frame.size.height/2 - 40, 80, 25);
     yTxtLayer.string = @"号码出现次数";
-    yTxtLayer.foregroundColor = lineColor.CGColor;
+    yTxtLayer.foregroundColor = HLBLackColor.CGColor;
     yTxtLayer.fontSize = 11;
     yTxtLayer.alignmentMode = kCAAlignmentCenter;
     yTxtLayer.contentsScale = [UIScreen mainScreen].scale;
@@ -65,7 +62,7 @@
     [xLinePath addLineToPoint:CGPointMake(self.frame.size.width, self.frame.size.height-35)];
     xLine.path = xLinePath.CGPath;
     xLine.lineWidth = 1;
-    xLine.strokeColor = lineColor.CGColor;
+    xLine.strokeColor = HLBLackColor.CGColor;
     [self.layer addSublayer:xLine];
     
     // x轴箭头
@@ -78,7 +75,7 @@
     [xArrowPath closePath];
     xArrow.path = xArrowPath.CGPath;
     xArrow.lineWidth = 1;
-    xArrow.fillColor = lineColor.CGColor;
+    xArrow.fillColor = HLBLackColor.CGColor;
     xArrow.lineCap = kCALineCapRound;
     [self.layer addSublayer:xArrow];
     
@@ -86,7 +83,7 @@
     CATextLayer *titleTxtLayer = [CATextLayer layer];
     titleTxtLayer.frame = CGRectMake(30, self.frame.size.height - 20, self.frame.size.width-30, 20);
     titleTxtLayer.string = [NSString stringWithFormat:@"%@",self.title];
-    titleTxtLayer.foregroundColor = lineColor.CGColor;
+    titleTxtLayer.foregroundColor = HLBLackColor.CGColor;
     titleTxtLayer.fontSize = 11;
     titleTxtLayer.alignmentMode = kCAAlignmentCenter;
     titleTxtLayer.contentsScale = [UIScreen mainScreen].scale;
@@ -126,13 +123,15 @@
             CATextLayer *numTxtLayer = [CATextLayer layer];
             numTxtLayer.frame = CGRectMake(30 + xSpace*(i+1) - xSpace*0.75, self.frame.size.height-35, xSpace*1.5, 25);
             numTxtLayer.string = [NSString stringWithFormat:@"%@",xValue];
-            numTxtLayer.foregroundColor = lineColor.CGColor;
+            numTxtLayer.foregroundColor = HLBLackColor.CGColor;
             numTxtLayer.fontSize = 11;
             numTxtLayer.alignmentMode = kCAAlignmentCenter;
             numTxtLayer.contentsScale = [UIScreen mainScreen].scale;
             [self.layer addSublayer:numTxtLayer];
         }
     }
+    
+    self.didDrawChart = YES;
 }
 
 

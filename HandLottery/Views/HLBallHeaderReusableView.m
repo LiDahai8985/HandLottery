@@ -31,7 +31,7 @@
 - (void)createSubviews
 {
     self.headerTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Screen_Width, 40)];
-    self.headerTitleLabel.textColor = RGBColor(90, 90, 90, 1);
+    self.headerTitleLabel.textColor = HLDarkGrayColor;
     self.headerTitleLabel.font = PingFengMedium(16);
     [self addSubview:self.headerTitleLabel];
     [self.headerTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -43,11 +43,11 @@
     [self.rightButton addTarget:self
                          action:@selector(randomButtonClickHandler:)
                forControlEvents:UIControlEventTouchUpInside];
-    [self.rightButton setTitleColor:RGBColor(90, 90, 90, 1) forState:UIControlStateNormal];
-    [self.rightButton setTitleColor:RGBColor(50, 50, 50, 1) forState:UIControlStateHighlighted];
+    [self.rightButton setTitleColor:HLDarkGrayColor forState:UIControlStateNormal];
+    [self.rightButton setTitleColor:HLBLackColor forState:UIControlStateHighlighted];
     self.rightButton.titleLabel.font = PingFengRegular(13);
     self.rightButton.backgroundColor = [UIColor whiteColor];
-    self.rightButton.layer.borderColor = RGBColor(180, 180, 180, 1).CGColor;
+    self.rightButton.layer.borderColor = HLGrayColor.CGColor;
     self.rightButton.layer.borderWidth = 0.5;
     self.rightButton.layer.cornerRadius = 11;
     [self addSubview:self.rightButton];

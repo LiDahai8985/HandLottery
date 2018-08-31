@@ -24,7 +24,7 @@
     self.navigationBar.translucent = NO;
     self.navigationBar.tintColor = [UIColor whiteColor];
     [self.navigationBar setBackgroundImage:[self drawImageWithColor:HLRedColor size:CGSizeMake(Screen_Width, 64)] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setShadowImage:[self drawImageWithColor:RGBColor(150, 150, 150, 1) size:CGSizeMake(Screen_Width, 0.5)]];
+    [self.navigationBar setShadowImage:[self drawImageWithColor:RGBColor(200, 200, 200, 1) size:CGSizeMake(Screen_Width, 1)]];
 }
 
 - (UIImage *)drawImageWithColor:(UIColor *)color size:(CGSize)size
@@ -53,6 +53,20 @@
     return NO;
 }
 
+
+#pragma mark- UIInterfaceOrientation
+
+- (BOOL)shouldAutorotate
+{
+    UIViewController *topViewController = self.viewControllers.lastObject;
+    return topViewController?[topViewController shouldAutorotate]:NO;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    UIViewController *topViewController = self.viewControllers.lastObject;
+    return topViewController?[topViewController supportedInterfaceOrientations]:UIInterfaceOrientationMaskPortrait;
+}
 
 #pragma mark-
 - (void)didReceiveMemoryWarning {

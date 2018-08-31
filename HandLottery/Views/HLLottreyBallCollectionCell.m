@@ -31,7 +31,7 @@
 {
     self.ballButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.ballButton.titleLabel.font = PingFengMedium(17);
-    self.ballButton.layer.borderColor = RGBColor(180, 180, 180, 1).CGColor;
+    self.ballButton.layer.borderColor = HLGrayColor.CGColor;
     [self.ballButton setTitleColor:self.selectedTextColor forState:UIControlStateNormal];
     [self.ballButton setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
     self.ballButton.layer.borderWidth = 0.5;

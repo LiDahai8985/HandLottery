@@ -15,6 +15,10 @@
 #define RGBColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define HLRedColor        RGBColor(235, 40, 30, 1)
 #define HLBlueColor       RGBColor(50, 140, 235, 1)
+#define HLBLackColor      RGBColor(30, 30, 30, 1)
+#define HLDarkGrayColor   RGBColor(100, 100, 100, 1)
+#define HLGrayColor       RGBColor(180, 180, 180, 1)
+#define HLLightGrayColor  RGBColor(230, 230, 230, 1)
 
 #define HLCount(n,m)      [HLUtil countOfGet:n from:m]
 
@@ -24,7 +28,10 @@
 #import "Masonry.h"
 #import "YYModel.h"
 #import "MJRefresh.h"
-#import "HLRequestManager.h"
 #import "HLUtil.h"
+#import "HLRequestManager.h"
+
+#import "HLBaseViewController.h"
+#import "HLNavigationController.h"
 
 #endif /* PrefixHeader_pch */

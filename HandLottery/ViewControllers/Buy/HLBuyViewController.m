@@ -27,7 +27,6 @@
 
 - (IBAction)buySuperLottoHandler:(id)sender
 {
-//    [HLRequestManager query_superLottoResultWithLastTerm:@"18080" pageCount:20];
     HLBuySuperLottoViewController *vc = [[HLBuySuperLottoViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }

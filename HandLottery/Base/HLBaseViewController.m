@@ -33,6 +33,24 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
+
+#pragma mark- UIInterfaceOrientation
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

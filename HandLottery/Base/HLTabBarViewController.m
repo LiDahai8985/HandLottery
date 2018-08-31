@@ -26,7 +26,7 @@
         viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     }
     
-    self.selectedIndex = 1;
+//    self.selectedIndex = 1;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,10 +35,17 @@
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark- UIInterfaceOrientation
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
 
 @end

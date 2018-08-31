@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HLSelectedColorBallModel.h"
 
 @interface HLUtil : NSObject
 
@@ -30,5 +31,21 @@
  @return 阶乘结果
  */
 + (long)factorialCountOfGet:(NSUInteger)get from:(NSUInteger)from;
+
+
+
+/**
+ 获取随机号码
+
+ @param total 要获取的数量
+ @param redRange (要取红球个数,取值范围）
+ @param blueRange (要取蓝球个数,取值范围）
+ @param sourceArray 已有的随机号码组合数据源
+ @return 获取到的随机号码
+ */
++ (NSArray *)randomNumWithTotalCount:(NSInteger)total
+                            redRange:(NSRange)redRange
+                           blueRange:(NSRange)blueRange
+                         sourceArray:(NSArray<HLSelectedColorBallModel *> *)sourceArray;
 
 @end

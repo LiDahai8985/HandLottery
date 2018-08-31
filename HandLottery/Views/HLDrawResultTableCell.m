@@ -40,12 +40,12 @@
 {
     self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 60, 25)];
     self.nameLabel.font = PingFengMedium(14);
-    self.nameLabel.textColor = RGBColor(30, 30, 30, 1);
+    self.nameLabel.textColor = HLBLackColor;
     [self addSubview:self.nameLabel];
     
     self.dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 10, 240, 25)];
     self.dateLabel.font = PingFengRegular(13);
-    self.dateLabel.textColor = RGBColor(80, 80, 80, 1);
+    self.dateLabel.textColor = HLDarkGrayColor;
     [self addSubview:self.dateLabel];
     
     self.firstBallLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 40, 40, 40)];
